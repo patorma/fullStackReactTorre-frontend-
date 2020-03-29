@@ -8,6 +8,12 @@ import {FORMULARIO_PROYECTO} from '../../types';
 // los hook empiezan con mayusculas
 const ProyectoState = props => {
     const initialState = {
+         proyectos : [
+            {id: 1,nombre: 'Tienda Virtual'},
+            {id: 2,nombre: 'Intranet'},
+            {id:3,nombre: 'Diseño de Sitio Web'},
+            {id:4, nombre: 'MERN'}
+        ],
         // se asocia a la funcionalidad de nuevo proyecto
         formulario: false
     }
@@ -29,6 +35,7 @@ const ProyectoState = props => {
         // desde aqui nacen los datos
         <proyectoContext.Provider
             value={{
+                proyectos:state.proyectos,
                 // primera clave state segunda funcion
                 formulario: state.formulario,
                 mostrarFormulario
